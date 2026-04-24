@@ -2,7 +2,7 @@
 import sys
 from calculator_1 import add, sub, mul, div
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
@@ -19,3 +19,5 @@ if __name__ == "__main__":
         print(f"{a} * {b} = {mul(a,b)}")
     if sys.argv[2] == "/":
         print(f"{a} / {b} = {div(a,b)}")
+if __name__ == "__main__":
+    main()
