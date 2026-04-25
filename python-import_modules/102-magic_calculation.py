@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-import dis
+def magic_calculation(a, b):
+    from magic_calculation_102 import add, sub
 
-my_list = [1, 2,3 ]
-print(dir(my_list))
+    if a < b:
+        c = add(a, b)
+        for i in range(4, 6):
+            c = add(c, i)
+        return c
+    else:
+        return sub(a, b)
