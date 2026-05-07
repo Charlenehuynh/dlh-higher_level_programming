@@ -26,6 +26,7 @@ class Rectangle:
     @property
     def height(self):
         return self.__height
+    @height.setter
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -34,7 +35,7 @@ class Rectangle:
         self.__height = value
 
 
-# my_rectangle = Rectangle(2,4)
+# my_rectangle = Rectangle(-2,4)
 # print(type(my_rectangle))
 # print(my_rectangle.__dict__)
 
