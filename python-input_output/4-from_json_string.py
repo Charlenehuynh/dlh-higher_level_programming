@@ -7,11 +7,11 @@ def from_json_string(my_str):
     """_summary_
 
     Args:
-        my_str (_type_): input 
+        my_str (_type_): input
 
     Returns:
         _type_: python object
-    """    
+    """
     return loads(my_str)
 
 
