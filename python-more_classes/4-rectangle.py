@@ -57,21 +57,20 @@ class Rectangle:
         return new_result
 
     def __repr__(self):
-        # return Rectangle(width, height)
+        #return Rectangle(width, height)
         return "Rectangle({}, {})".format(self.width, self.height)
 
+# my_rectangle = Rectangle(2, 4)
 
-my_rectangle = Rectangle(2, 4)
+# new_rectangle = eval(repr(my_rectangle))
+# print(str(new_rectangle))
+# print("--")
+# # print(new_rectangle)
+# # print("--")
+# # print(repr(new_rectangle))
+# # print("--")
+# # print(hex(id(new_rectangle)))
+# # print("--")
 
-new_rectangle = eval(repr(my_rectangle))
-print(str(new_rectangle))
-print("--")
-# print(new_rectangle)
-# print("--")
-# print(repr(new_rectangle))
-# print("--")
-# print(hex(id(new_rectangle)))
-# print("--")
-
-# print(new_rectangle is my_rectangle)
-# print(type(new_rectangle) is type(my_rectangle))
+# # print(new_rectangle is my_rectangle)
+# # print(type(new_rectangle) is type(my_rectangle))
