@@ -53,7 +53,9 @@ class Rectangle:
             for j in range(self.__width):
                 result += "#"
             result += "\n"
-        return result
+        new_result = result.rstrip("\n")
+        return new_result
+
 
 # my_rectangle = Rectangle(2, 4)
 # print("Area: {} - Perimeter: {}"
