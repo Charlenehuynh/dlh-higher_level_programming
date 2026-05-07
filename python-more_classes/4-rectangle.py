@@ -48,25 +48,30 @@ class Rectangle:
     def __str__(self):
         result = ""
         # loop over column (height)
-        for _ in range(self.__height):
+        for i in range(self.__height):
             # loop over width:
-            for _ in range(self.__width):
+            for j in range(self.__width):
                 result += "#"
             result += "\n"
         new_result = result.rstrip("\n")
         return new_result
 
+    def __repr__(self):
+        # return Rectangle(width, height)
+        return "Rectangle({}, {})".format(self.width, self.height)
 
-# my_rectangle = Rectangle(2, 4)
-# print("Area: {} - Perimeter: {}"
-# .format(my_rectangle.area(), my_rectangle.perimeter()))
 
-# print(str(my_rectangle))
-# print(repr(my_rectangle))
+my_rectangle = Rectangle(2, 4)
 
+new_rectangle = eval(repr(my_rectangle))
+print(str(new_rectangle))
+print("--")
+# print(new_rectangle)
+# print("--")
+# print(repr(new_rectangle))
+# print("--")
+# print(hex(id(new_rectangle)))
 # print("--")
 
-# my_rectangle.width = 10
-# my_rectangle.height = 3
-# print(my_rectangle)
-# print(repr(my_rectangle))
+# print(new_rectangle is my_rectangle)
+# print(type(new_rectangle) is type(my_rectangle))
