@@ -15,5 +15,6 @@ def append_write(filename="", text=""):
     return length
 
 
-# nb_characters_added = append_write("file_append.txt", "This School is so cool!\n")
+# nb_characters_added = append_write
+# ("file_append.txt", "This School is so cool!\n")
 # print(nb_characters_added)
