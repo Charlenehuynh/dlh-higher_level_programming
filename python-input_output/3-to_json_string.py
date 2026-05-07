@@ -1,8 +1,17 @@
 #!/usr/bin/python3
 from json import dumps
-
+    """return JSON representation of an object
+    """
 
 def to_json_string(my_obj):
+    """_summary_
+
+    Args:
+        my_obj (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     return dumps(my_obj)
 
 
