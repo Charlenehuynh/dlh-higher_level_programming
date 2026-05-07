@@ -6,9 +6,12 @@
 class Rectangle:
     """class define a rectangle"""
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     # width
     @property
@@ -61,15 +64,14 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
 
-# my_rectangle = Rectangle(2, 4)
-# print("Area: {} - Perimeter: {}".format(my_rectangle.area(),
-# my_rectangle.perimeter()))
-
-# del my_rectangle
-# try:
-#     print(my_rectangle)
-# except Exception as e:
-#     print("[{}] {}".format(e.__class__.__name__, e))
+my_rectangle_1 = Rectangle(2, 4)
+my_rectangle_2 = Rectangle(2, 4)
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+del my_rectangle_1
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+del my_rectangle_2
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
