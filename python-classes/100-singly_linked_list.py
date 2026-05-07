@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""This module create a single linked list by module."""
+
+
 class Node:
+    """ This class represent data and pointer of node"""
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
@@ -26,6 +30,7 @@ class Node:
 
 
 class SinglyLinkedList:
+    """ This class create a singly linked list"""
     def __init__(self):
         self.__head = None
 
@@ -40,10 +45,12 @@ class SinglyLinkedList:
             new_node = Node(value, self.__head)
             self.__head = new_node
             return
-        # 3. Middle or end where value > head. Create pointer current and traverse until next is none or current.data >= value
+        # 3. Middle or end where value > head. Create pointer
+        # current and traverse until next is none or current.data >= value
         if value > self.__head.data:
             current = self.__head
-            while current.next_node is not None and current.next_node.data < value:
+            while (current.next_node is not None
+                   and current.next_node.data < value):
                 current = current.next_node
             new_node = Node(value, current.next_node)
             current.next_node = new_node
