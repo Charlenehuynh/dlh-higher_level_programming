@@ -62,7 +62,8 @@ class Square:
                 if i == self.size - 1:
                     str = str + (" " * self.position[0] + "#" * self.size)
                 else:
-                    str = str + (" " * self.position[0] + "#" * self.size + "\n")
+                    str = str + (" " * self.position[0] +
+                                 "#" * self.size + "\n")
             return str
 
 
