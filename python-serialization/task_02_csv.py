@@ -20,5 +20,5 @@ def convert_csv_to_json(filename):
         json.dump(result, file)
 
 
-csv_file = "data.csv"
-convert_csv_to_json(csv_file)
+# csv_file = "data.csv"
+# convert_csv_to_json(csv_file)
