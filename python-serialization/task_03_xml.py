@@ -24,7 +24,10 @@ def deserialize_from_xml(filename):
     new = {}
     result = ET.parse(filename)
     for i in result.getroot().iter():
-        new[i.tag] = str(i.text)
+        if i.tag == "data":
+            continue
+        else:
+            new[i.tag] = str(i.text)
     return new
 
 
