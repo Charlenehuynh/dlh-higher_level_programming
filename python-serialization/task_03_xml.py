@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Serialization and deserialization using XML as an alternative format to JSON."""
+"""Serialization and deserialization
+using XML as an alternative format to JSON."""
 
 import xml.etree.ElementTree as ET
 
