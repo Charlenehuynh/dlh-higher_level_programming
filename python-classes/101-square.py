@@ -55,14 +55,15 @@ class Square:
         str = ""
         if self.size == 0:
             print()
-        for _ in range(self.position[1]):
-            str += "\n"
-        for i in range(self.size):
-            if i == self.size - 1:
-                str = str + (" " * self.position[0] + "#" * self.size)
-            else:
-                str = str + (" " * self.position[0] + "#" * self.size + "\n")
-        return str
+        else:
+            for _ in range(self.position[1]):
+                str += "\n"
+            for i in range(self.size):
+                if i == self.size - 1:
+                    str = str + (" " * self.position[0] + "#" * self.size)
+                else:
+                    str = str + (" " * self.position[0] + "#" * self.size + "\n")
+            return str
 
 
 # my_square = Square(5, (0, 0))
