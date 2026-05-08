@@ -11,13 +11,18 @@ def convert_csv_to_json(filename):
     Args:
         filename (_type_):
     """
-    result = []
-    with open(filename, "r") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            result.append(row)
-    with open("data.json", "w") as file:
-        json.dump(result, file)
+    try:
+        result = []
+        with open(filename, "r") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                result.append(row)
+        with open("data.json", "w") as file:
+            json.dump(result, file)
+            return True
+    except Exception as e:
+        print("An error occured", e)
+        return False
 
 
 # csv_file = "data.csv"
