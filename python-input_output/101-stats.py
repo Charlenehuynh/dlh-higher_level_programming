@@ -26,3 +26,7 @@ if __name__ == "__main__":
         print(f"File size: {total_size}")
         for key, value in sorted(my_dict.items()):
             print(f"{key}: {value}")
+
+    print(f"File size: {total_size}")
+    for key, value in sorted(my_dict.items()):
+        print(f"{key}: {value}")
