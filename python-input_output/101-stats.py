@@ -6,6 +6,7 @@ import sys
 total_size = 0
 count = 0
 my_dict = {}
+valid_codes = ["200", "301", "400", "401", "403", "404", "405", "500"]
 if __name__ == "__main__":
     try:
         for line in sys.stdin:
@@ -13,7 +14,8 @@ if __name__ == "__main__":
                 parts = line.split()
                 # print(parts)  # temporary debug line
                 count += 1
-                my_dict[parts[-2]] = my_dict.get(parts[-2], 0) + 1
+                if parts[-2] in valid_codes:
+                    my_dict[parts[-2]] = my_dict.get(parts[-2], 0) + 1
                 total_size += int(parts[-1])
                 if count == 10:
                     count = 0
