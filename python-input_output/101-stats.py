@@ -7,6 +7,7 @@ total_size = 0
 count = 0
 my_dict = {}
 try:
+    """test """
     for line in sys.stdin:
         parts = line.split()
         count += 1
